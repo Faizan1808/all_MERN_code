@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: cornsilk;
+        }
+        h1{
+            text-align: center;
+            text-decoration: underline;
+        }
+        pre{
+            font-size: 1.4rem;
+            color: deepskyblue;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Problem Solving</h1>
+
+    <h2>Q1. Find the Smaller Angle?</h2>
+    <pre>
+        Ans. var Minimal_Angle = (h, m) =>{
+
+            const minuteAngle = m * 6;
+            const hourAngle = (h * 30) + (m * 0.5);
+            const angle = Math.abs(hourAngle - minuteAngle);
+            return Math.min(angle, 360 - angle);
+        };
+         
+    </pre>
+
+    <h2>Q2. Check whether the year is Leap year or not?</h2>
+    <pre>
+        Ans. var Check_Leap = (year) => {
+         
+          if ( year % 4 === 0 && year % 100 !== 0 || year % 400 === 0){
+            return "Leap Year";
+          }
+          else{
+              return "Non Leap Year";
+          }
+        
+        };
+    </pre>
+
+    <h2>Q3. Perfect Number Check?</h2>
+    <pre>
+        Ans. var Perfect_Check = (N) => {        
+          
+          var count = 0;
+            for(var i = 0; i < N; i++){
+              
+            if(N % i === 0){
+                count = count + i;
+            }
+            }
+            if(count == N)
+              {
+              return "YES";
+              }
+              else
+              {
+              return "NO";
+                    
+              }
+        };
+    </pre>
+
+    <h2>Q4. Reverse a Number?</h2>
+    <pre>
+        Ans. var Reverse_Number = (N) => {
+
+          N = N + "";
+          var b =  parseFloat((N.split('').reverse().join('')));
+          return b;
+        
+        };
+         
+    </pre>
+
+    <h2>Q5. Substring Check?</h2>
+    <pre>
+        Ans. var Substring_Check = (S1, S2) => {
+
+            if (S1.includes(S2)){
+            return "YES";
+            }
+            else{
+                return "NO";
+        
+              }
+        };
+         
+    </pre>
+
+</body>
+</html>

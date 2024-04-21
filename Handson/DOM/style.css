@@ -1,0 +1,68 @@
+body{
+    background-color: wheat;
+}
+
+.parent{
+    display: flex;
+}
+
+.child{
+    background-color: red;
+    height: 150px;
+    width: 250px;
+    margin: 5px;
+    flex-direction: row;
+}
+
+.child1{
+    background-color: aqua;
+}
+
+.child2{
+    background-color: yellow;
+}
+
+.child3{
+    background-color: yellowgreen;
+}
+
+.child4{
+    background-color: teal;
+}
+
+.btn{
+    height: 50px;
+    width: 150px;
+    cursor: pointer;
+    margin-right: 50px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: rgb(224, 222, 222);
+    color: black    ;
+}
+
+p{
+    color: tomato;
+    font-size: 20px;
+}
+
+pre{
+    color: coral;
+    font-size: 20px;
+}
+
+.Heading{
+    text-align: center;
+    text-decoration: underline;
+
+}
+.parent-clock{
+    font-size: 25px;
+    position: relative;
+    left: 70px;
+    bottom: 43px
+}
+
+h3{
+    font-size: 20px;
+}

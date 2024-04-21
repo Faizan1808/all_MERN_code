@@ -1,0 +1,38 @@
+.parent{
+    display: flex;
+}
+
+.child{
+    background-color: red;
+    height: 150px;
+    width: 250px;
+    margin: 5px;
+    flex-direction: row;
+}
+
+.child1{
+    background-color: aqua;
+}
+
+.child2{
+    background-color: yellow;
+}
+
+.child3{
+    background-color: yellowgreen;
+}
+
+.child4{
+    background-color: teal;
+}
+
+.btn{
+    height: 50px;
+    width: 150px;
+    cursor: pointer;
+    margin-right: 50px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: rgb(224, 222, 222);
+    color: black    ;
+}

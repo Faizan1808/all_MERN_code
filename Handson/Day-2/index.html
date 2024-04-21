@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Decision Making</h1>
+
+    <h2>Q1. Calculator?</h2>
+    <pre>
+
+      Ans. const Calculator = (A, B, C) => {
+        
+          switch (A){
+            case "+":
+              return ( B + C);
+              
+            case "-":
+              return  ( B - C);
+              
+            case "*":
+              return  ( B * C);
+              
+            case "/":
+              return  ( B / C);
+              
+            default:
+              return ("bad expression")
+          }
+      };
+
+    </pre>
+
+    <h2>Q2. Check whether the condition is fulfilled or not?</h2>
+    <pre>
+        Ans. const Check_divisibility = (N) => {
+            if (N % 6 === 0 && N % 9 === 0){
+              return ("Divisible by both");
+            }
+            else{
+              return ("Not Divisible by both");
+            }
+        
+            
+        };
+        
+    </pre>
+
+
+    <h2>Q3. Eligible Voter?</h2>
+    <pre>
+        Ans.const isEligible = (a) => {
+            if (a >= 18){
+              return ("Eligible for Voting")
+            }
+            
+            else{
+              return ("Not Eligible for Voting")
+            }
+          
+        };
+    </pre>
+
+    <h2>Q4. Find Relation?</h2>
+    <pre>
+        Ans. const findRelation = (x,y) => {
+            if (x < y){
+              return (x + " is smaller than " + y);
+            }
+            
+            else if (x > y){
+              return (x + " is greater than " + y);
+            }
+            
+            else{
+              return (x + " is equal to " + y);
+            }
+        };
+    </pre>
+
+    <h2>Q5. Find Grades?</h2>
+    <pre>
+        Ans. const findGrades = (a) => {
+            if (a <= 10){
+              return ("E");
+            }
+            else if(a >= 11 && a <= 20){
+             return ("D" );
+            }
+            else if(a >= 21 && a <= 30){
+             return ("C") ;
+            }
+            else if(a >= 31 && a <= 40){
+             return ("B") ;
+            }
+            else{
+              return ("A");
+            }
+        };
+    </pre>
+
+    <h2>Q6. Get Value?</h2>
+    <pre>
+        Ans. const getValue = (a) => {
+            if (a == "P" || a == "p") {
+              return ("PrepBytes");
+            }
+            else if (a == "Z" || a == "z") {
+              return ("Zenith");
+            }
+            else if(a == "E" || a == "e") {
+              return ("Expert Coder");
+            }
+            else if (a == "D" || a == "d"){
+              return ("Data Structure");
+            }
+            else{
+              return ("check input")
+            }
+        };
+        
+    </pre>
+
+    <h2>Q7. Find the maximum out of three numbers?</h2>
+    <pre>
+        Ans. const Max_out_of_three = (A,B,C) => {
+            if (A > B && A > C){
+              return A;
+            }
+            else if (B > A && B > C){
+              return B;
+            }
+            
+            else if (C > A && C > B ){
+              return C;
+            }
+            
+            else{
+              return -1;
+            }
+        };
+        
+    </pre>
+
+    <h2>Q8. Second Smallest?</h2>
+
+    <pre>
+      Ans. const findSndSmallest = (x,y,z) => {
+  
+  
+        if((x < y&& y< z)||(z < y && y < x)){
+              
+              return y;
+            }
+              
+           else if((y < x && x < z)||(z < x && x < y)){
+              
+              return (x)
+            }
+          else{
+            return(z);
+          }    
+   };
+    </pre>
+
+    <h2>Q9. Check whether the triangle is Acute or Obtuse?</h2>
+    <pre>
+        
+        Ans. const Triangle_Check = (A,B,C) => {
+            
+            if (A > B + C || B > C + A || C > A + B ){
+            return ("obtuse");
+            }
+            
+            else{
+            return ("acute");
+            }
+
+        };
+    </pre>
+
+</body>
+</html>

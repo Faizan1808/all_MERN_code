@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance & Prototype</title>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <h1>Prototype & Inheritance</h1>
+    
+    <h3>Q1: Create 2 objects - parent and child. Attach methods to parent and use those methods in child object using parents prototype</h3>
+
+    <pre>
+    code: 
+    const parent={
+        calc(){
+            console.log(`${this.fName}`);
+        },
+        age(){
+            console.log(`${this.age}`);
+        }
+    }
+    let child = Object.create(parent);
+    child.fName = "sam";
+    child.calc()
+    </pre>
+
+    <h3>Q2: Write code to explain prototype chaining</h3>
+
+    <pre>
+    Ans: 
+    let chaining={
+        faiz:"not my name",
+        age:23,
+        career:"SE"
+    }
+    
+    let firstChain = {
+        name:"Sam",
+        surname:"Jhon",
+    
+    }
+    let secondChain = {
+        iq:"150",
+        apptitude:"nill"
+    }
+    
+    firstChain.__proto__ = chaining
+    console.log(firstChain.age);
+    </pre>
+
+    <h3>Q3: Add a method to calculate sum of all elements in Array in array's protype, use that method to calculate sum for multiple arrays</h3>
+
+    <pre>
+    code: 
+    const addSum = {
+        add : function(a){
+            let sum = 0;
+            for(let i = 0; i < a.length; i++){
+                sum += a[i];
+            }
+            console.log(sum);
+        }
+    }
+    
+    addSum.add([50,55,19,60,58])
+    </pre>
+
+    <h3>Q4: Write a JavaScript function to retrieve all the names of object's own and inherited properties.</h3>
+
+    <pre>
+    code: 
+    let animal={
+        legs:4,
+        moves:'fast',
+        crawl:true
+    }
+    
+    let obj1={
+        pets:"dog,cat,birds",
+        living:"in home with us",
+        loyal:true
+    }
+    
+    let obj2={
+        func:function humans(){
+            console.log("cruel");
+        }
+    }
+    console.log(obj1.hasOwnProperty('pets'));
+    </pre>
+
+    <script src="index.js"></script>
+</body>
+</html>

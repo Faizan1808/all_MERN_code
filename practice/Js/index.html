@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<p>
+
+    <h1>Data Types in JavaScript</h1>
+    <ol>
+        <li>Primitive Datatype</li>
+        <ul>
+            <li>String</li>
+            <li>Number</li>
+            <li>Boolean</li>
+            <li>Null</li>
+            <li>Undefined</li>
+        </ul>
+        <li>Non-primitive Datatype</li>
+        <ul>
+            <li>Object</li>
+            <li> Arrays</li>
+        </ul>
+    </ol>
+
+    <table border="1px">
+        <tr>
+            <th>Primitive Datatype</th>
+            <th>Non-primitive Datatype</th>
+        </tr>
+        <tr>
+            <td>Primitive Data types are predefined. </td>
+            <td>Non-Primitive data types are created by programmer.</td>
+        </tr>
+        
+        <tr>
+            <td>Primitive Data types will have certain values. </td>
+            <td>Non-Primitive data types can be NULL</td>
+        </tr>
+        
+        <tr>
+            <td>Size depends on type on data structure.</td>
+            <td>Size are not fixed.</td>
+        </tr>
+        <tr>
+            <td>Examples are numbers, string.</td>
+            <td>Example are Array, Linked List.</td>
+        </tr>
+    </table>
+        <h1>Execution Context</h1>
+    <p>memory(Variable Environment)</p>
+    <p>Code(Thread of Execution)</p>
+
+    <div>
+        <h2>Let vs Var vs Const</h2>
+        <p>VAR is used for variable declaration in javascript. Variables created by var are
+        function scoped.Var support hoisting</p>
+
+        <p>LET allows you to declare variables that are limited to the scope of a block
+        statement. Let does not support hoisting</p>
+
+        <p>Variable declared by let cannot be redeclared and must be declared before use.</p>
+
+        <p>CONST allows you to declare variables that are limited to the scope of a block
+    statement. Const Variables cannot be redeclared or reassigned.</p>
+
+    </div>
+
+    <div>
+        <h2>Hoisting</h2>
+        <p>JavaScript Hoisting refers to the process whereby the interpreter appears to move
+        the declaration of functions, variables or classes to the top of their scope, prior to
+        execution of the code.</p>
+        <p>Hoisting allows functions to be safely used in code before they are declared.</p>
+    </div>
+
+    <div>
+       <h2> Operators </h2>
+    <p>Operators are symbols that are used to perform operations on operands.</p>
+    <p>There are following types of operators in JavaScript.</p>
+
+        <ul>
+            <li>Arithmetic Operators </li>
+            <li>Increment / Decrement operators</li>
+            <li>Relational Operators</li>
+            <li>Bitwise Operators</li>
+            <li>Logical Operators</li>
+            <li>Assignment Operators</li>
+            <li>Ternary Operators</li>
+        </ul>
+
+
+        <h2>Conditional statement </h2>
+        <p>Syntax</p>
+        <pre>
+            if (condition) {
+            console.log("statement");
+                }
+            
+            else{
+                console.log("statement");
+            }
+        </pre>
+        <ul>
+            <li>if</li>
+            <li>else if</li>
+            <li>else</li>
+        </ul>
+    </div>
+
+    <h2>Logical Operators</h2>
+    <ul>
+        <li>&& and</li>
+        <li>|| Or</li>
+        <li>! Not</li>
+    </ul>
+
+    <h1>Conditional statement</h1>
+    <ul>
+        <li>Switch Case</li>
+    </ul>
+
+    <h1>Loops</h1>
+    <ul>
+        <li>for</li>
+        <ul>
+            <li>for(intialization; condition; increment/decrement)</li>
+        </ul>
+        <li>While</li>
+    </ul>
+
+    <p>Entry check loop</p>
+    <p>
+        for loop have for(intialization; condition; increment/decrement)
+    </p>
+
+   <p>While have only condition</p>
+
+   <p>do have semicolon at the end.
+    it is exit check loop.
+   </p>
+    <!-- <script src="index.js">
+
+
+    </script> -->
+
+    <h2>Arrays</h2>
+    <p>Function which dont have name is called anonymous functions</p>
+    <ol>
+
+    
+        <li>Map</li>
+        <ul>
+            <li>map is a high order function.</li>
+            <li>function inside if function is a callback function.</li>
+        </ul>
+
+        <li>Filter</li>
+        <ul>
+            <li>It filter the data.</li>
+            <li>You can keep a condition in filter.</li>
+        </ul>
+
+        <li>Reduce</li>
+        <ul>
+            <li>It has multiple functionality.</li>
+            <li>It pass two parameter first indexing will be the in-built value 
+                <br> for total and the rest will use for operatorsfot first indexing.</li>
+            <li>If we provide new parameter then it won't take the first indexing</li>
+        </ul>
+
+        <li>findIndex</li>
+        <ul>
+            <li>It find the index of value.</li>
+            <li>It just look for one correct answer and it will stop.</li>
+        </ul>
+
+        <li>pop</li>
+        <ul>
+            <li>It remove value from last of array.</li>
+            <li>Pop return the value</li>
+        </ul>
+
+        <li>push</li>
+        <ul>
+            <li>It add the value at the end of the array.</li>
+           
+        </ul>
+
+        <li>shift</li>
+        <ul>
+            <li>It remove the value at the first index of the array.</li>
+           
+        </ul>
+
+        <li>unshift</li>
+        <ul>
+            <li>It add the value at the first index of the array.</li>
+           <li>unshift also return value</li>
+        </ul>
+    
+        <li>slice</li>
+        <ul>
+            <li>cut the array in parts.</li>
+            <li>index start from 1 and slice the of present array.</li>
+           
+        </ul>
+
+        <li>splice</li>
+        <ul>
+            <li>cut the array in parts.</li>
+            <li>it pass two parameter but it have some different first value for index and second is for count.</li>
+           <li>we can also add value in array.</li>
+        </ul>
+
+        <li>some</li>
+        <ul>
+            <li>satisfied wether a one condition is true or false.</li>
+            
+        </ul>
+
+        <li>every</li>
+        <ul>
+            <li>It satisfied all the value.</li>
+            
+        </ul>
+
+        <li>indexOf</li>
+        <ul>
+            <li>It show the index of the value we want.</li>
+            
+        </ul>
+    </ol>
+    
+    <h2>Arrays</h2>
+
+    <ol>
+        <li>Split</li>
+        <ul>
+            <li>It split the value.</li>
+        </ul>
+        <li>Slice</li>
+        <li>trimStart</li>
+        <li>trimEnd</li>
+        <li>toUpperCase</li>
+        <li>toLowerCase</li>
+        <li>replace</li>
+        <li>replaceAll</li>
+    </ol>
+
+    <h2>Bitwise</h2>
+
+    <h2>Objects</h2>
+
+    <h2>Sets</h2>
+    <ul>
+        <li>new Set (to create new set with assigning a variable)</li>
+        <li>add()</li>
+        <li>mySet.has()</li>
+        <li>Size</li>
+    </ul>
+    
+    <h2>Map</h2>
+    <ul>
+        <li>get()</li>
+        <li>a.set()</li>
+        <li>size()</li>
+        <li>delete()</li>
+        <li>forEach (for functions)</li>
+        <li>entries()</li>
+    </ul>
+
+    <div id="main" class="show"></div>
+    <button onclick="randomCode()">Click Here</button>
+
+
+    <script src="index.js"></script>
+
+    <h2> <a href="./index1.html">Go Back</a></h2>
+</body>
+</html>

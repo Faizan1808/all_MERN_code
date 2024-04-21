@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p{
+            font-size: 20px;
+        }
+        pre{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <p>Q1: Difference between “ == “ and “ === “ operators?</p>
+
+    <pre>
+    Ans: They both are comparison operator
+    "==" convert the variable values to same type before performing comparison. This is called coercion
+    "===" does not do any type of coercion and return true only if variable and data type are same.
+    </pre>
+
+    <p>Q2: What is the spread operator?</p>
+
+    <pre>
+    Ans: Spread Operator is used to destructured the non-primitive data type.
+    It allows us to quickly copy all part of existing array or object into another array or object.
+    Syntax: "{...variableName}"
+    </pre>
+
+    <p>Q3: What are the differences between var, let and const?</p>
+
+    <pre>
+    Ans: These three are keyword for variable.
+    var is a global type which can be assign any where and can de reinitialized and can be redeclare.
+    let is a block scope it will assign once and can be reinitialized but cant be redeclare to the same variable.
+    const is a block scope it will assign only nce and then it can't de redeclare or reinitialized to the same variable.
+    </pre>
+
+    <p>Q4: What is Execution Context</p>
+    <pre>
+    Ans: An Execution Context is an abstract environment which execute javascript code.
+    If code is written in global scope then it will run under global execution context.
+    If the code is written un the local/functional scope then it will run under the local execution context.
+    </pre>
+
+    <p>Q5: What is meant by first class functions?</p>
+    <pre>
+    Ans: The function that can be assign to any variable or passed as an argument or can be returned by another function is known as First class function.
+    </pre>
+
+    <p>Q6: What are closures? Give an example of closure?</p>
+
+    <pre>
+    Ans: A closure is the combination of a function bundled together with the lexical environment. A closure give access to an outer
+    function scope from an inner function. 
+    </pre>
+
+    <p>Q7: Explain call(), apply() and, bind() methods. Give an example of call(), apply(), bind()</p>
+
+    <pre>
+    Ans: These three are used to borrow thw function.
+    call - it passes the parameter by comma separated.
+    apply - it passes the parameter by by an array.
+    Bind - it passes the whole function so we have to assign it to the variable and you have to call it.
+
+    example:
+    const obj1 = {
+        fName : "Sam";
+        lName : "johnathan"
+    }
+
+    function intro(age,place){
+        console.log(`My name is ${this.fName} ${this.lName} and i am ${age} old and i am from ${place}`)
+    }
+
+    intro.call(obj1,24,India)
+    intro.apply(obj1,[24,India])
+
+    let x = intro.bind(obj1);
+    x(24,India)
+    </pre>
+
+    <p>Q8: What is creation phase and execution phase?</p>
+
+    <pre>
+    Ans: these two are the part of Execution Context.
+    in creation phase if the variable is defined with the var keyword it will allow to global scope.
+    if the variable is assign with let and const then it will allow to the block scope and for both 
+    global and block the value will be undefined.
+    After the creation phase it will move into Execution phase.
+    where the variables get there assign value and it will execute with their original values.
+    </pre>
+
+    <p>Q9: What are objects in javascript?</p>
+
+    <pre>
+    Ans: Objects are key value pairs. An object is a collection of function and data.
+    </pre>
+
+    <p>Q10: What are function constructors?</p>
+    <pre>
+    Ans: Function Constructor creates a new function object. Calling the Constructor can create function dynamically.
+    It is useful when you want to create multiple similar objects with same properties and methods(eg:- Details of students,employee)
+    
+        function studentDetails(fName,lName,age,place){
+            this.fName = fName;
+            this.lName = lName;
+            this.age = age;
+            this.place = place
+        }
+
+        const Ram = new studentDetails("ram","Kumar",17,"Jharkhand");
+
+        console.log(Ram)
+
+        const Shyam = new studentDetails("Shyam","Mahotra", 18, "Uk")
+
+        console.log(Shyam)
+   
+    </pre>
+
+    <p>Q11: Explain prototypes?</p>
+    <pre>
+    Ans: Every object in javascript has a built-in property which is called its prototype.
+    In prototype we can attach methods and properties in a prototype object, which enables all the other objects to inherits these methods 
+    and properties. 
+
+    Example:-
+    const Hari = {
+        fName: "Hari";
+        lName: "Sharma";
+        Nationality: "Indian"
+
+        showDetails = function(){
+            console.log(`I am ${this.fName} ${this.lName} and i am ${this.Nationality}`)
+        }
+    }
+
+    const Pari = {
+        fName: "Pari"
+    }
+
+    Pari.__proto__ = Hari
+    </pre>
+
+    <p>Q12: What is prototype chain?</p>
+    <pre>
+    Ans: The prototype is itself an object, so the prototype will have its own prototype, 
+    making what's called a prototype chain. The chain ends when we reach a prototype that 
+    has null for its own prototype.
+    </pre>
+
+    <p>Q13: Give an example of inheritance using function constructor?</p>
+    <pre>
+        function Employee(name, age, gender, id) {
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+            this.id = id;
+        };
+        
+        function Developer(name, age, gender, id, 
+        specialization) {
+        
+            Employee.call(this, name, age, gender, id);
+            this.specialization = specialization;
+        }
+        
+        let Employee1 = new Employee("Suraj", 28, "Male", 564);
+        let Developer1 = new Developer("Karishma", 31, "Female", 345,
+            "Frontend Developer");
+        console.log(Employee1);
+        console.log(Developer1);
+    </pre>
+
+    <p>Q14: What are callbacks?</p>
+
+    <pre>
+    Ans: A callback function passed as an argument to another function. this allow a function call another function.
+    </pre>
+
+    <p>Q15: What is the use of setTimeout?</p>
+
+    <pre>
+    Ans: setTimeout is an asynchronous. It execute when it certain given period is finished. 
+    </pre>
+
+    <p>Q16: What is an event loop and call stack?</p>
+
+    <pre>
+    Ans: An Event loop that pulls stuff out of the queue and places it into the function execution context.
+    A call stack is a mechanism for an interpreter to keep track of its place in script that call multiple function
+    </pre>
+
+    <p>Q17: What are arrow functions?</p>
+
+    <pre>
+    Ans: Arrow function is one of the features introduced in the ES6 version of JavaScript.
+     It allows you to create functions in a cleaner way compared to regular functions.
+    </pre>
+
+    <p>Q18: What is a Temporal Dead Zone?</p>
+
+    <pre>
+    Ans: Temporal Dead Zone is the period of time during which the let and const declarations cannot be accessed.
+    Temporal Dead Zone starts when the code execution enters the block which contains the let or const declaration 
+    and continues until the declaration has executed.
+    </pre>
+
+    <p>Q19: What is hoisting?</p>
+    <pre>
+    Ans: JavaScript Hoisting refers to the process whereby the interpreter appears to move the declaration of functions,
+    variables or classes to the top of their scope, prior to execution of the code.
+    </pre>
+
+    <p>Q20: What is the DOM?</p>
+    <pre>
+    Ans: The Document Object Model (DOM) is a programming interface for web documents. 
+    It represents the page so that programs can change the document structure, style, and content.
+    </pre>
+
+    <p>Q21: Difference between undefined vs not defined vs NaN? </p>
+
+    <pre>
+    Ans: Undefined :- when the variable is called without assigning and value.
+    not defined :-  when thw variable is called without declaring.
+    NaN :- NaN meant not a number. 
+    </pre>
+
+    <p>Q22: How many operators do we have in JS ?</p>
+    <pre>
+    Ans: There are 6 operators in js.
+    Assignment, Arithmetic, Conditional , Comparison, Logical, Bitwise, and  type 
+    </pre>
+
+    <p>Q23: What are pure functions?</p>
+    <pre>
+    Ans:A Pure Function is a function (a block of code) that always returns the same result if the same arguments are passed.
+    </pre>
+
+    <p>Q24: What is callback hell?</p>
+    <pre>
+    Ans: Nested callback is known as Callback Hell.
+    </pre>
+
+    <p>Q25: What are promises and why do we need them?</p>
+
+    <pre>
+    Ans: Promises are the consumer and producer.
+    It helps to prevent callback hell and it also help to work with API's.
+    Promises are also used to handle all the asynchronous tasks.
+    </pre>
+
+    <p>Q26: What is promise chaining?</p>
+
+    <pre>
+    Ans: Nested promises are known as promise chaining.
+    </pre>
+
+    <p>Q27: Give an example of async/await?</p>
+
+    <pre>
+    Ans: async function func1(){
+         let promise = new Promise(function (resolve, reject){
+              resolve("i am inside async await function");
+         })
+    
+         let res = await promise
+    
+         console.log(res);
+    }
+    
+    func1()
+    
+    </pre>
+
+    <h1 id ="main"></h1>
+    <button onclick="heading()">Click</button>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
